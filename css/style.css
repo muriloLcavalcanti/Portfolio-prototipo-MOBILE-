@@ -1,0 +1,512 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Saira Extra Condensed", sans-serif;
+  text-decoration: none;
+}
+
+html {
+  background-color: darkgray;
+  height: 100%;
+}
+
+p,
+h4,
+h3,
+h2,
+h1 {
+  color: rgb(255, 255, 255);
+  margin: 3px 0;
+  font-size: 18px;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "nav nav nav"
+    "conteudo conteudo conteudo";
+
+  height: 100%;
+  max-width: 100vw;
+}
+
+nav {
+  max-width: 100vw;
+
+  grid-area: nav;
+
+  display: grid;
+  grid-template-areas: "perfil menuNavegacao";
+  grid-template-columns: 1fr 5fr;
+
+  background-image: linear-gradient(
+      0deg,
+      rgba(255, 217, 0, 0.281),
+      rgba(255, 106, 143, 0.102)
+    ),
+    url("Peyote-horizontal.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* border: solid 3px red; */
+}
+
+.perfil {
+  padding: 1rem;
+  grid-area: perfil;
+  display: grid;
+  justify-items: center;
+}
+.nome {
+  display: grid;
+  justify-items: center;
+
+  font-weight: bolder;
+  color: rgb(255, 94, 0);
+}
+.icones-sociais {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  min-width: 124px;
+  margin: 2%;
+}
+.icones-sociais a {
+  background-color: rgb(19, 23, 235);
+  border: 1px solid rgb(0, 0, 0);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a i {
+  font-size: 1.5rem;
+  color: rgb(253, 253, 253);
+}
+
+.menu {
+  grid-area: menuNavegacao;
+  display: grid;
+  align-items: center;
+
+  /* background-color: turquoise; */
+}
+.menu a {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.55);
+  color: #104a72;
+  border-radius: 5px;
+  border: 0.1px solid whitesmoke;
+  margin: 0.2rem;
+  font-weight: bold;
+  cursor: crosshair;
+}
+ul {
+  display: flex;
+  text-align: center;
+
+  flex-wrap: wrap;
+}
+li {
+  font-size: 1.5rem;
+}
+
+section {
+  max-width: 100vw;
+
+  grid-area: conteudo;
+
+  justify-items: center;
+
+  display: grid;
+  grid-template-columns: 1fr 99% 1fr;
+  grid-template-areas: ". card .";
+
+  background-image: linear-gradient(
+      180deg,
+      rgb(0, 0, 0),
+      rgba(24, 54, 18, 0.61)
+    ),
+    url("../css/Matrix\ -\ revert.jpg");
+
+  background-size: cover;
+}
+
+.cards-container {
+  max-width: 80%;
+
+  grid-area: card;
+
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+
+  /* background-color: turquoise; */
+}
+
+.card-inicio {
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px 10px;
+
+  background-color: rgba(24, 54, 18, 0.61);
+
+  /* border: solid 6px rgb(230, 6, 6); */
+}
+
+figure {
+  width: auto;
+  float: right;
+
+  border: 1px cyan solid;
+}
+.foto-container img {
+  border-radius: 50%;
+  border: solid 6px rgb(0, 0, 0);
+  width: 120px;
+  height: 120px;
+}
+
+.card-projetos {
+  display: flex;
+  flex-direction: column;
+
+  margin: 10px 0;
+  padding: 10px;
+
+  height: auto;
+
+  border-radius: 10px;
+  /* border: 1px solid red; */
+  background-color: rgba(24, 54, 18, 0.61);
+}
+
+.card-projetos img {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 2px;
+  border-radius: 10px;
+}
+
+.album-projetos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-around;
+
+  padding: 30px;
+  width: 100%;
+
+  height: auto;
+
+  border: rgb(238, 255, 3) solid 1px;
+}
+
+.figurinha-album-projetos {
+  border: darkmagenta solid 6px;
+  width: 300px;
+  height: auto;
+}
+
+.figurinha-album-projetos img {
+  /* border: solid 6px rgb(251, 255, 4); */
+  width: 100%;
+  height: 100%;
+}
+
+.card-certificados {
+  margin: 10px 0;
+  padding: 10px;
+
+  height: auto;
+
+  border-radius: 10px;
+  /* border: 1px solid red; */
+  background-color: rgba(24, 54, 18, 0.61);
+}
+
+.album-certificados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  padding: 3px;
+  width: 100%;
+
+  height: auto;
+
+  border: rgb(238, 255, 3) solid 1px;
+}
+
+.figurinha-album-certificados {
+  width: 100%;
+  height: auto;
+  display: flex;
+
+  border: darkmagenta solid 1px;
+}
+
+.figurinha-album-certificados img {
+  width: 100%;
+  height: auto;
+}
+
+.card-contato {
+  margin: 10px 0;
+  padding: 10px;
+
+  height: auto;
+
+  border-radius: 10px;
+  /* border: 1px solid red; */
+  background-color: rgba(24, 54, 18, 0.61);
+}
+
+.card-curriculo {
+  margin: 10px 0;
+  padding: 10px;
+
+  height: auto;
+
+  border-radius: 10px;
+  /* border: 1px solid red; */
+  background-color: rgba(24, 54, 18, 0.61);
+}
+
+body{
+  display: none;
+}
+
+
+
+/* ======== Configuraçõe de 1024px 351px ======== */
+
+@media (max-width: 1024px){
+  html {
+    background-color: darkgray;
+    height: 100%;
+  }
+  p,
+  h4,
+  h3,
+  h2,
+  h1 {
+    color: rgb(255, 255, 255);
+    margin: 3px 0;
+    font-size: 18px;
+  }
+  body {
+    display: grid;
+    grid-template-areas:
+      "nav nav nav"
+      "conteudo conteudo conteudo";
+    height: 100%;
+    max-width: 100vw;
+  }
+
+  nav {
+    max-width: 100vw;
+    grid-area: nav;
+    display: grid;
+    grid-template-areas: "perfil menuNavegacao";
+    grid-template-columns: 1fr 5fr;
+
+    background-image: linear-gradient(
+        0deg,
+        rgba(255, 217, 0, 0.281),
+        rgba(255, 106, 143, 0.102)
+      ),
+      url("Peyote-horizontal.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .perfil {
+    padding: 1rem;
+    grid-area: perfil;
+    display: grid;
+    justify-items: center;
+  }
+  .nome {
+    display: grid;
+    justify-items: center;
+    font-weight: bolder;
+    color: rgb(255, 94, 0);
+  }
+  .icones-sociais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    min-width: 124px;
+    margin: 2%;
+  }
+  .icones-sociais a {
+    background-color: rgb(19, 23, 235);
+    border: 1px solid rgb(0, 0, 0);
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  a i {
+    font-size: 1.5rem;
+    color: rgb(253, 253, 253);
+  }
+  .menu {
+    grid-area: menuNavegacao;
+    display: grid;
+    align-items: center;
+  }
+  .menu a {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.55);
+    color: #104a72;
+    border-radius: 5px;
+    border: 0.1px solid whitesmoke;
+    margin: 0.2rem;
+    font-weight: bold;
+    cursor: crosshair;
+  }
+  ul {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  li {
+    font-size: 1.5rem;
+  }
+
+
+  section {
+    max-width: 100vw;
+    grid-area: conteudo;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 99% 1fr;
+    grid-template-areas: ". card .";
+    background-image: linear-gradient(
+        180deg,
+        rgb(0, 0, 0),
+        rgba(24, 54, 18, 0.61)
+      ),
+      url("../css/Matrix\ -\ revert.jpg");
+    background-size: cover;
+  }
+  .cards-container {
+    max-width: 80%;
+    grid-area: card;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+
+  .card-inicio {
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px 10px;
+    background-color: rgba(24, 54, 18, 0.61);
+  }
+  figure {
+    width: auto;
+    float: right;
+  }
+  .foto-container img {
+    border-radius: 50%;
+    border: solid 6px rgb(0, 0, 0);
+    width: 120px;
+    height: 120px;
+  }
+
+
+  .card-projetos {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 10px;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgba(24, 54, 18, 0.61);
+  }
+  .card-projetos img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 2px;
+    border-radius: 10px;
+  }
+  .album-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-around;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+  }
+  .figurinha-album-projetos {
+    width: 300px;
+    height: auto;
+  }
+  .figurinha-album-projetos img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .card-certificados {
+    margin: 10px 0;
+    padding: 10px;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgba(24, 54, 18, 0.61);
+  }
+  .album-certificados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 3px;
+    width: 100%;
+    height: auto;
+  }
+  .figurinha-album-certificados {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  .figurinha-album-certificados img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .card-contato {
+    margin: 10px 0;
+    padding: 10px;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgba(24, 54, 18, 0.61);
+  }
+
+  .card-curriculo {
+    margin: 10px 0;
+    padding: 10px;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgba(24, 54, 18, 0.61);
+  }
+}
+
+@media (max-width: 315px) {
+  body{
+    display: none;
+  }
+}
